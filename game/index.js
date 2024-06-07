@@ -66,14 +66,14 @@ class Game {
           continue;
         }
 
-        const checkResult =
+        const winner =
           this.#checkResult(i, j, "horizontal") ||
           this.#checkResult(i, j, "vertical") ||
           this.#checkResult(i, j, "diagonal_top") ||
           this.#checkResult(i, j, "diagonal_bottom");
 
-        if (checkResult !== null) {
-          return checkResult;
+        if (winner !== null) {
+          return winner;
         }
       }
     }
